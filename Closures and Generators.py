@@ -132,3 +132,15 @@ print plural('daisy' , filename)
 print plural('noise' ,  filename)
 print plural('boy' , filename)
 print plural('watch' , filename)
+
+# Building a fibanacci generator
+def fib(n):
+    a , b = 0,1
+    while a <= n:
+        yield a
+        a , b = b , a+b
+
+fib_20 = fib(20)
+
+for element in fib_20:
+    print element
